@@ -5,50 +5,83 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('금호동', style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1),)),
-          leading: Icon(Icons.star),
-          backgroundColor: Colors.white,
-          actions: [
-            Icon(Icons.star),
-            Icon(Icons.star),
-            Icon(Icons.star),
-          ],
-
-        ),
-        body: Container(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Image.asset('dog.png', width: 150, height: 150,),
-                  Text('캐논 DSLR 100D (단랜즈, 충전기 16기가SD포함)', maxLines: 3)
-                ],
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                    ],
-                  ),
-                  Column(),
-                  Column(),
-                ],
-              )
-            ]
-          ),
-        )
-      )
-    );
+        home: Scaffold(
+            appBar: AppBar(),
+            body: ListView(
+              children: [
+                Text('1'),
+                Text('1'),
+                Text('1'),
+                Text('1'),
+                Text('1'),
+              ],
+            )));
   }
 }
+
+class ShopItem extends StatelessWidget {
+  const ShopItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(child: Text('안녕'));
+  }
+}
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         home: Scaffold(
+//             appBar: AppBar(
+//               title: Text('금호동'),
+//               leading: Icon(Icons.star),
+//               backgroundColor: Colors.black,
+//               actions: [
+//                 Icon(Icons.star),
+//                 Icon(Icons.star),
+//                 Icon(Icons.star),
+//               ],
+//             ),
+//             body: Container(
+//                 height: 150,
+//                 padding: EdgeInsets.all(10),
+//                 child: Row(
+//                   children: [
+//                     Image.asset(
+//                       'dog.png',
+//                       width: 150,
+//                     ),
+//                     Expanded(
+//                       child: Column(
+//                           crossAxisAlignment: CrossAxisAlignment.start,
+//                           children: [
+//                             Expanded(
+//                               child: Text(
+//                                 '카메라 팝니다 카메라 팝니다카메라 팝니다',
+//                                 style: TextStyle(fontSize: 24),
+//                               ),
+//                             ),
+//                             Text('금호동 3가',
+//                                 style: TextStyle(color: Colors.grey)),
+//                             Text('7000원'),
+//                             Row(
+//                               mainAxisAlignment: MainAxisAlignment.end,
+//                               children: [Icon(Icons.favorite), Text('4')],
+//                             )
+//                           ]),
+//                     )
+//                   ],
+//                 ))));
+//   }
+// }
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({ Key? key }) : super(key: key);
@@ -66,14 +99,14 @@ class MyApp extends StatelessWidget {
 //           ],
 //         ),
 //         body: SizedBox(
-//           child: 
+//           child:
 //           IconButton(icon: Icon(Icons.star), onPressed: (){},) //버튼
 //           // ElevatedButton( // 버튼
 //           //   child: Text('버튼'),
 //           //   onPressed: (){},
 //           //   style: ButtonStyle(),
 //           //   )
-//           // Text('안녕하세요', 
+//           // Text('안녕하세요',
 //           //     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20, color: Color.fromRGBO(0, 0, 0, 0.4), backgroundColor: Colors.red, height: 0,),
 //           //     ),
 //           // Icon(Icons.star, color: Colors.red, size: 10,)
@@ -149,7 +182,7 @@ class MyApp extends StatelessWidget {
 //               Icon(Icons.contact_page),
 //               ]
 //           )
-//         ) 
+//         )
 //         )
 //       )
 //     );
@@ -162,10 +195,10 @@ class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
-      
+
 //       home: Scaffold(
 //         // appBar: AppBar(),
-//         body: 
+//         body:
 //           Column(
 //             mainAxisAlignment: MainAxisAlignment.spaceEvenly, // 가로축 정렬
 //             crossAxisAlignment: CrossAxisAlignment.end, // 세로축 정렬
@@ -186,7 +219,7 @@ class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
-      
+
 //       home: Scaffold(
 //         // appBar: AppBar(),
 //         body: Container(
@@ -208,7 +241,6 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-
 
 // 기본 적인 텍스트, 이미지, 아이콘, 박스 집어넣는 법
 // class MyApp extends StatelessWidget {
